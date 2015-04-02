@@ -1,16 +1,14 @@
-# Display a prompt for the user
-puts "I am thinking of an integer between 0 and 10... what number am I thinking of? "
+number = rand(1..10)
 
-# Obtain the user's input and interpret it as an integer.
-answer = 
+puts "I'm thinking of a random number from 1 to 10. 
+      Use your Jedi mind powers to guess the number."
+guess = gets.chomp.to_i
 
-# Generate a random number between 0 and 10
-secret = 
-
-# Use a while loop to let the user guess again until he/she gets the answer right.
-while 
-  
+while guess != number
+	puts "Errr! Sorry. Wrong guess--guess again Jedi. YOU CAN DO IT!"
+	guess = gets.chomp.to_i
 end
 
-# Display a congratulatory response
-puts "that's it!  How'd you know?!"
+if guess == number
+	puts "You got it! Good job Jedi!"
+end
